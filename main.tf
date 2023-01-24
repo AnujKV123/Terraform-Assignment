@@ -26,3 +26,18 @@ resource "local_file" "foob" {
   filename = "MyFiles/file2.txt"
   content  = "This is my second file"
 }
+
+# terraform localsk ***************************************
+
+locals {
+  content = "Hi how are you"
+}
+resource "local_file" "fooLx" {
+  filename = "local1.txt"
+  content  = local.content
+}
+
+resource "local_file" "fooLy" {
+  filename = "local2.txt"
+  content  = local.content
+}
