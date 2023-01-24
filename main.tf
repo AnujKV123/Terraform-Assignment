@@ -30,14 +30,26 @@ resource "local_file" "foob" {
 # terraform localsk ***************************************
 
 locals {
-  content = "Hi how are you"
+  xyz = "Hi how are you"
 }
 resource "local_file" "fooLx" {
   filename = "local1.txt"
-  content  = local.content
+  content  = local.xyz
 }
 
 resource "local_file" "fooLy" {
   filename = "local2.txt"
-  content  = local.content
+  content  = local.xyz
+}
+
+#  terraform random ******************************************
+
+resource "local_file" "fooLz" {
+  # filename = "${random_id.random-file-name.hex}.txt"
+  filename = "${random_id.random-file-name.hex}.html"
+  content  = local.xyz
+}
+
+resource "random_id" "random-file-name" {
+  byte_length = 8
 }
