@@ -1,0 +1,1 @@
+#include <bits/stdc++.h> usingnamespace std; int x=2; cout<<x;
