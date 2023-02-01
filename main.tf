@@ -131,3 +131,16 @@ resource "local_file" "fooVarPctList" {
 variable "a" {
   type = list(string)
 }
+
+resource "local_file" "fooVarPctObj" {
+  filename = var.var-obj["f-name"]
+  content  = var.var-obj["con"]
+}
+
+
+# output block ***********************************
+
+output "content-from-fooVarPctList" {
+  # value = local_file.fooVarPctList.content
+  value = local_file.fooVarPctList.filename
+}

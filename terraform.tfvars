@@ -7,3 +7,8 @@ practice_map = {
 }
 
 a=["fileX.py", "fileY.py", "fileZ.py"]
+
+var-obj = {
+    f-name = "objectFile.yml"
+    con = "congent from yml"
+}

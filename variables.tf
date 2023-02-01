@@ -10,3 +10,10 @@ variable "var_content" {
   default = "This is demo content"
 
 }
+
+variable "var-obj" {
+  type = object({
+    f-name = string
+    con = string
+  })
+}
